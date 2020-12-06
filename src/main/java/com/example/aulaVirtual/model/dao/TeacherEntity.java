@@ -44,6 +44,15 @@ public class TeacherEntity {
     @OneToOne(mappedBy = "teacher")
     private UserTeacherEntity userTeacher_id;
 
+    public TeacherEntity(Long id, Long code, String names, String last_names, String email, String personal_email, String photo_url) {
+        this.id = id;
+        this.code = code;
+        this.names = names;
+        this.last_names = last_names;
+        this.email = email;
+        this.personal_email = personal_email;
+        this.photo_url = photo_url;
+    }
 
     public Long getId() {
         return id;

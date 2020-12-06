@@ -30,6 +30,14 @@ public class UserTeacherEntity {
     @JoinColumn(name="teacher_id")
     private TeacherEntity teacher;
 
+    public UserTeacherEntity(Long id, String username, String password, String reset_key, String activation_key) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.reset_key = reset_key;
+        this.activation_key = activation_key;
+    }
+
     public Long getId() {
         return id;
     }

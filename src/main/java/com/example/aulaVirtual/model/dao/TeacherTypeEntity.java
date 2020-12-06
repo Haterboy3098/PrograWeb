@@ -11,17 +11,17 @@ public class TeacherTypeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name",length = 20)
-    private String name;
+    @Column(name = "names",length = 20)
+    private String names;
 
     @OneToMany(mappedBy = "teacherType")
     private List<TeacherEntity> teachers;
 
-    public TeacherTypeEntity(Long id, String name, List<TeacherEntity> teachers) {
+    public TeacherTypeEntity(Long id, String names) {
         this.id = id;
-        this.name = name;
-        this.teachers = teachers;
+        this.names = names;
     }
+
 
     public Long getId() {
         return id;
@@ -31,12 +31,12 @@ public class TeacherTypeEntity {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNames() {
+        return names;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNames(String names) {
+        this.names = names;
     }
 
     public List<TeacherEntity> getTeachers() {

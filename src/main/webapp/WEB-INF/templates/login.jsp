@@ -1,4 +1,5 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -17,7 +18,7 @@
         <div class="contenido">
             <div class="contenedor">
                 <h2>Login</h2>
-                <form action="">
+                <form action="/procesar_login" method="POST">
                     <div class="input-box">
                         <label for="usuario">Usuario</label>
                         <input type="text" id="usuario" name="usuario" required="">
@@ -52,3 +53,4 @@
 
 </body>
 </html>
+

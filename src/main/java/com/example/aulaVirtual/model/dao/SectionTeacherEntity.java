@@ -16,11 +16,8 @@ public class SectionTeacherEntity {
     @ManyToOne
     private TeacherEntity teacher;
 
-    public SectionTeacherEntity(Long id, SectionEntity section, TeacherEntity teacher){
-
+    public SectionTeacherEntity(Long id) {
         this.id = id;
-        this.section = section;
-        this.teacher = teacher;
     }
 
     public Long getId() {

@@ -24,12 +24,10 @@ public class CourseEntity {
     private List<SectionEntity> sections;
 
 
-    public CourseEntity(Long id, Long code, String name, CareerEntity career, List<SectionEntity> sections) {
+    public CourseEntity(Long id, Long code, String name) {
         this.id = id;
         this.code = code;
         this.name = name;
-        this.career = career;
-        this.sections = sections;
     }
 
     public Long getId() {
