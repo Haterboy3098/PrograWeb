@@ -41,20 +41,9 @@ public class TeacherEntity {
     @OneToMany(mappedBy = "teacher")
     private List<SectionTeacherEntity> SectionTeacher;
 
+    @OneToOne(mappedBy = "teacher")
+    private UserTeacherEntity userTeacher_id;
 
-    public TeacherEntity(Long id, Long code, String names, String last_names, String email, String personal_email, String photo_url, CountryEntity country, GenderEntity gender, TeacherTypeEntity teacherType, List<SectionTeacherEntity> sectionTeacher) {
-        this.id = id;
-        this.code = code;
-        this.names = names;
-        this.last_names = last_names;
-        this.email = email;
-        this.personal_email = personal_email;
-        this.photo_url = photo_url;
-        this.country = country;
-        this.gender = gender;
-        this.teacherType = teacherType;
-        SectionTeacher = sectionTeacher;
-    }
 
     public Long getId() {
         return id;
@@ -144,5 +133,11 @@ public class TeacherEntity {
         SectionTeacher = sectionTeacher;
     }
 
+    public UserTeacherEntity getUserTeacher_id() {
+        return userTeacher_id;
+    }
 
+    public void setUserTeacher_id(UserTeacherEntity userTeacher_id) {
+        this.userTeacher_id = userTeacher_id;
+    }
 }

@@ -3,8 +3,8 @@ package com.example.aulaVirtual.model.dao;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "UserStudent")
-public class UserStudentEntity {
+@Table(name = "UserTeacher")
+public class UserTeacherEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,11 +24,11 @@ public class UserStudentEntity {
 
     @OneToOne
     @JoinColumn(name = "user_id")
-    private UsersEntity user;
+    private UsersEntity users;
 
     @OneToOne
-    @JoinColumn(name="student_id")
-    private StudentEntity student;
+    @JoinColumn(name="teacher_id")
+    private TeacherEntity teacher;
 
     public Long getId() {
         return id;
@@ -71,19 +71,18 @@ public class UserStudentEntity {
     }
 
     public UsersEntity getUser() {
-        return user;
+        return users;
     }
 
-    public void setUser(UsersEntity user) {
-        this.user = user;
+    public void setUser(UsersEntity users) {
+        this.users = users;
     }
 
-    public StudentEntity getStudent() {
-        return student;
+    public TeacherEntity getTeacher() {
+        return teacher;
     }
 
-    public void setStudent(StudentEntity student) {
-        this.student = student;
+    public void setTeacher(TeacherEntity teacher) {
+        this.teacher = teacher;
     }
-
 }

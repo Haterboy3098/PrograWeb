@@ -18,7 +18,7 @@
                     <h2>AL</h2>
                     <h3>Alumno</h3>
                     <p>Si eres Alumno ingresa aquí</p>
-                    <a href="../html/login">Ingresar</a>
+                    <a href="./login/alumno">Ingresar</a>
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
                     <h2>PR</h2>
                     <h3>Profesor</h3>
                     <p>Si eres Profesor de algún curso ingresa aquí</p>
-                    <a href="../html/login">Ingresar</a>
+                    <a href="./login/profesor">Ingresar</a>
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@
                     <h2>AD</h2>
                     <h3>Administrador</h3>
                     <p>Si eres Administrador ingresa aquí</p>
-                    <a href="../html/login">Ingresar</a>
+                    <a href="./login/admin">Ingresar</a>
                 </div>
             </div>
         </div>

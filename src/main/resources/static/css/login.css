@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+section .imagen{
+    position: relative;
+    width: 50%;
+    height: 100%;
+
+}
+section .imagen::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(225deg,#ff5117,#03a9f4);
+    z-index: 1;
+    mix-blend-mode: screen;
+}
+section .imagen img{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section .contenido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+section .contenido .contenedor{
+    width: 50%;
+}
+
+section .contenido .contenedor h2{
+    color:#607d8b;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #ff5117;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+section .contenido .contenedor .input-box{
+    margin-bottom: 20px;
+}
+section .contenido .contenedor .input-box label{
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color:#607d8b;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+section .contenido .contenedor .input-box input{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #607d8b;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color:#607d8b;
+    background: transparent;
+    border-radius: 30px;
+}
+
+section .contenido .contenedor .input-box input[type="submit"]{
+    background: #ff5117;
+    color:#fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+section .contenido .contenedor .input-box input[type="submit"]:hover{
+    background:#ff5117;
+}
+
+section .contenido .contenedor .enlaces{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+section .contenido .contenedor .input-box a{
+    color:#ff5117;
+}
+@media only screen and (max-width:768px){
+    section .imagen{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    section .contenido{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    section .contenido .contenedor{
+        width: 100%;
+        padding: 40px;
+        background:rgba(255, 255, 255, 0.9) ;
+        margin: 50px;
+    }
+}

@@ -38,22 +38,8 @@ public class StudentEntity {
     @ManyToOne
     private CountryEntity country;
 
-    @OneToMany(mappedBy = "student")
-    private List<UserStudentEntity> userStudent;
-
-    public StudentEntity(Long id, Long code, String names, String last_names, String email, String personal_email, String photo_url, GenderEntity gender, CareerEntity career, CountryEntity country, List<UserStudententity> userStudent) {
-        this.id = id;
-        this.code = code;
-        this.names = names;
-        this.last_names = last_names;
-        this.email = email;
-        this.personal_email = personal_email;
-        this.photo_url = photo_url;
-        this.gender = gender;
-        this.career = career;
-        this.country = country;
-        this.userStudent = userStudent;
-    }
+    @OneToOne(mappedBy = "student")
+    private UserStudentEntity userStudent_id;
 
     public CountryEntity getCountry() {
         return country;
@@ -135,11 +121,4 @@ public class StudentEntity {
         this.career = career;
     }
 
-    public List<UserStudentEntity> getUserStudent() {
-        return userStudent;
-    }
-
-    public void setUserStudent(List<UserStudentEntity> userStudent) {
-        this.userStudent = userStudent;
-    }
-}
+ }

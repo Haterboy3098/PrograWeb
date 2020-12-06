@@ -6,13 +6,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="../img/logo.ico" />
-    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../css/login.css">
     <title>Pagina</title>
 </head>
 <body>
     <section>
         <div class="imagen">
-            <img src="../img/bg.jpg" alt="imagen">
+            <img src="../images/bg.jpg" alt="imagen">
         </div>
         <div class="contenido">
             <div class="contenedor">
@@ -31,8 +31,18 @@
                     </div>
                     <div class="input-box enlaces">
                         <!-- Modificar estos textos segun enlace presionado -->
-                        <a href="#">Eres Profesor?</a>
-                        <a href="#">Eres Alumno?</a>
+                        <c:if test="${tipoUsuario == 'admin'}">
+                            <a href="./alumno">Eres Alumno?</a>
+                            <a href="./profesor">Eres Profesor?</a>
+                        </c:if>
+                        <c:if test="${tipoUsuario == 'alumno'}">
+                            <a href="./admin">Eres Admin?</a>
+                            <a href="./profesor">Eres Profesor?</a>
+                        </c:if>
+                        <c:if test="${tipoUsuario == 'profesor'}">
+                            <a href="./alumno">Eres Alumno?</a>
+                            <a href="./admin">Eres Admin?</a>
+                        </c:if>
                     </div>
                 </form>
 
