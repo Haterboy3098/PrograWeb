@@ -23,10 +23,6 @@ public class UserTeacherEntity {
     private String activation_key;
 
     @OneToOne
-    @JoinColumn(name = "user_id")
-    private UsersEntity users;
-
-    @OneToOne
     @JoinColumn(name="teacher_id")
     private TeacherEntity teacher;
 
@@ -68,14 +64,6 @@ public class UserTeacherEntity {
 
     public void setActivation_key(String activation_key) {
         this.activation_key = activation_key;
-    }
-
-    public UsersEntity getUser() {
-        return users;
-    }
-
-    public void setUser(UsersEntity users) {
-        this.users = users;
     }
 
     public TeacherEntity getTeacher() {

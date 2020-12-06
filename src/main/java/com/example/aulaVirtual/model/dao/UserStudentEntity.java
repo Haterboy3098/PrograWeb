@@ -22,9 +22,6 @@ public class UserStudentEntity {
     @Column(name = "activation_key",length = 45)
     private String activation_key;
 
-    @OneToOne
-    @JoinColumn(name = "user_id")
-    private UsersEntity user;
 
     @OneToOne
     @JoinColumn(name="student_id")
@@ -68,14 +65,6 @@ public class UserStudentEntity {
 
     public void setActivation_key(String activation_key) {
         this.activation_key = activation_key;
-    }
-
-    public UsersEntity getUser() {
-        return user;
-    }
-
-    public void setUser(UsersEntity user) {
-        this.user = user;
     }
 
     public StudentEntity getStudent() {
