@@ -17,10 +17,12 @@ public class TeacherTypeEntity {
     @OneToMany(mappedBy = "teacherType")
     private List<TeacherEntity> teachers;
 
-    public TeacherTypeEntity(Long id, String name, List<TeacherEntity> teachers) {
+    public TeacherTypeEntity() {
+    }
+
+    public TeacherTypeEntity(Long id, String name) {
         this.id = id;
         this.name = name;
-        this.teachers = teachers;
     }
 
     public Long getId() {

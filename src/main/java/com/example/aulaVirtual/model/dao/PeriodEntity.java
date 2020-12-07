@@ -50,8 +50,11 @@ public class PeriodEntity {
         this.year = year;
     }
 
+    public List<SectionEntity> getSections() {
+        return sections;
+    }
 
-
-
-
+    public void setSections(List<SectionEntity> sections) {
+        this.sections = sections;
+    }
 }

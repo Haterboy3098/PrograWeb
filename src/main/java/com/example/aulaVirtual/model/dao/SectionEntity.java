@@ -26,13 +26,13 @@ public class SectionEntity {
     @OneToMany(mappedBy = "section")
     private List<SectionStudentEntity> sectionStudent;
 
-    public SectionEntity(Long id, Long code, PeriodEntity period, CourseEntity course, List<SectionTeacherEntity> sectionTeacher, List<SectionStudentEntity> sectionStundet) {
+
+    public SectionEntity() {
+    }
+
+    public SectionEntity(Long id, Long code) {
         this.id = id;
         this.code = code;
-        this.period = period;
-        this.course = course;
-        this.sectionTeacher = sectionTeacher;
-        this.sectionStudent = sectionStundet;
     }
 
     public Long getId() {

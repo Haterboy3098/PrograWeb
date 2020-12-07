@@ -17,10 +17,13 @@ public class CareerEntity {
     @OneToMany(mappedBy = "career")
     private List<CourseEntity> courses;
 
-    public CareerEntity(Long id, String name, List<CourseEntity> courses) {
+
+    public CareerEntity() {
+    }
+
+    public CareerEntity(Long id, String name) {
         this.id = id;
         this.name = name;
-        this.courses = courses;
     }
 
     public Long getId() {

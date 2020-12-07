@@ -41,6 +41,19 @@ public class StudentEntity {
     @OneToOne(mappedBy = "student")
     private UserStudentEntity userStudent_id;
 
+    public StudentEntity() {
+    }
+
+    public StudentEntity(Long id, Long code, String names, String last_names, String email, String personal_email, String photo_url) {
+        this.id = id;
+        this.code = code;
+        this.names = names;
+        this.last_names = last_names;
+        this.email = email;
+        this.personal_email = personal_email;
+        this.photo_url = photo_url;
+    }
+
     public CountryEntity getCountry() {
         return country;
     }

@@ -20,11 +20,12 @@ public class CountryEntity {
     @OneToMany(mappedBy = "country")
     private List<StudentEntity> students;
 
-    public CountryEntity(Long id, String name, List<TeacherEntity> teachers, List<StudentEntity> students) {
+    public CountryEntity() {
+    }
+
+    public CountryEntity(Long id, String name) {
         this.id = id;
         this.name = name;
-        this.teachers = teachers;
-        this.students = students;
     }
 
     public Long getId() {

@@ -16,10 +16,11 @@ public class SectionStudentEntity {
     @ManyToOne
     private StudentEntity student;
 
-    public SectionStudentEntity(Long id, SectionEntity section, StudentEntity student) {
+    public SectionStudentEntity() {
+    }
+
+    public SectionStudentEntity(Long id) {
         this.id = id;
-        this.section = section;
-        this.student = student;
     }
 
     public Long getId() {

@@ -20,17 +20,13 @@ public class GenderEntity {
     @OneToMany(mappedBy = "gender")
     private List<StudentEntity> students;
 
-    public GenderEntity(Long id, String name, List<TeacherEntity> teachers, List<StudentEntity> students) {
-        this.id = id;
-        this.name = name;
-        this.teachers = teachers;
-        this.students = students;
+
+    public GenderEntity() {
     }
 
-    public GenderEntity(Long id, String name, List<TeacherEntity> teachers) {
+    public GenderEntity(Long id, String name) {
         this.id = id;
         this.name = name;
-        this.teachers = teachers;
     }
 
     public Long getId() {
